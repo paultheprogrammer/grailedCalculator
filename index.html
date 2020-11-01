@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<!-- TODO: encrypting PayPal donation info & including Loading Animations -->
+<!-- TODO: encrypting PayPal donation info & including Loading Animations
+https://developer.paypal.com/docs/paypal-payments-standard/integration-guide/encryptedwebpayments/#
+-->
 <html>
     <head>
         <title>Grailed Fee Calculator</title>
@@ -32,18 +34,18 @@
     
         <div id="inputs">
             <br>
-            List Price: 
+            Sale Price: 
             <input class="input" type="number" id="list">
             <br><br>
             <button onclick="calc();" id="but">Calculate Fees</button>
             <br><br> 
-            Grailed Commision: 
+            Grailed Fees: 
             <input type="number" id="com" disabled class="input">
             <br><br> 
             Paypal Fees: 
             <input class="input" type="number" id="paypal" disabled>
             <br><br> 
-            Amount Paid: 
+            Total Payout: 
             <input class="input" type="number" id="des" disabled>
         </div>
 
