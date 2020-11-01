@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- TODO: encrypting PayPal donation info & including Loading Animations -->
 <html>
     <head>
         <title>Grailed Fee Calculator</title>
@@ -13,6 +14,8 @@
                 var list = document.getElementById('list').value;
                 var com = list * .09;
                 var paypal = (list * .029) + .3
+                paypal=paypal.toFixed(2);
+                com=com.toFixed(2);
                 $("#com").val(com);
                 $("#paypal").val(paypal);
                 des = list - com - paypal;
