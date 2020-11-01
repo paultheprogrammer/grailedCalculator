@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grailed Fee Calculator</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.grailed.com/images/favicon_grailed.ico" sizes="48x48" />
+        <link rel="stylesheet" type="text/css" href="index.css">
+
+
+    </head>
+    <body>
+
+        <strong><h2>GRAILED CALCULATOR</h2></strong>
+
+        <br>
+    
+        <div id="inputs">
+            <br>
+            List Price: 
+            <input class="input" type="number" id="list">
+            <br><br>
+            <button onclick="calc();" id="but">Calculate Fees</button>
+            <br><br> 
+            Grailed Commision: 
+            <input type="number" id="com" disabled class="input">
+            <br><br> 
+            Paypal Fees: 
+            <input class="input" type="number" id="paypal" disabled>
+            <br><br> 
+            Amount Paid: 
+            <input class="input" type="number" id="des" disabled>
+        </div>
+
+
+        <!-- Fee Calculation -->
+        
+        <script type="type/javascript">
+            function calc() {
+                var list = document.getElementById('list').value;
+                var com = list * .09;
+                var paypal = (list * .029) + .3
+                $("#com").val(com);
+                $("#paypal").val(paypal);
+                des = list - com - paypal;
+                $("#des").val(des);
+            }
+        </script>
+
+        <br>
+        <br>
+
+        <!--Paypal Donations-->
+        <div id="paypals">
+          
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations" />
+            <input type="hidden" name="business" value="VAW8LFFHBBSJG" />
+            <input type="hidden" name="item_name" value="Grailed Calculator" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+              
+        </div>
+
+
+    </body>
+</html>
