@@ -6,6 +6,20 @@
         <link rel="stylesheet" type="text/css" href="index.css">
 
 
+        <!-- Fee Calculation -->
+        
+        <script type="type/javascript">
+            function calc() {
+                var list = document.getElementById('list').value;
+                var com = list * .09;
+                var paypal = (list * .029) + .3
+                $("#com").val(com);
+                $("#paypal").val(paypal);
+                des = list - com - paypal;
+                $("#des").val(des);
+            }
+        </script>
+
     </head>
     <body>
 
@@ -32,19 +46,6 @@
         </div>
 
 
-        <!-- Fee Calculation -->
-        
-        <script type="type/javascript">
-            function calc() {
-                var list = document.getElementById('list').value;
-                var com = list * .09;
-                var paypal = (list * .029) + .3
-                $("#com").val(com);
-                $("#paypal").val(paypal);
-                des = list - com - paypal;
-                $("#des").val(des);
-            }
-        </script>
 
         <br>
         <br>
